@@ -1,0 +1,659 @@
+
+body{
+  
+  background: radial-gradient(circle, #1f3756 50%, #141539);
+  color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  
+}
+
+
+.hidden{
+    display: none;
+}
+
+#Header{
+  display: flex;
+  border: 2px solid #606e85;
+  border-radius: 12px;
+  margin: 2% auto;
+  padding: 1% 2%;
+  width: 55%;
+  justify-content: space-between;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.score-Card{
+    background-color: white;
+    border-radius: 5%;
+    width: 25%;
+    
+}
+.score-label{
+    color: hsl(229, 64%, 46%);
+    margin-top: 4%;
+    margin-bottom: 0%;
+    
+}
+.score{
+    color: hsl(229, 25%, 31%);
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 1%;
+    line-height: 1.0;
+}
+
+#Game-Main{
+    height: 350px;
+    margin: 3% 10% 0%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("images/bg-triangle.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn-paper{
+    background-image: url("images/icon-paper.svg");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 47%;
+    width: 17%;
+    border: 20px solid hsl(230, 89%, 62%);
+    border-radius: 100%;
+    box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(86, 113, 245, 0.7);
+    cursor: pointer;
+}
+.btn-paper:hover{
+    transform: scale(1.2);
+}
+.pos-paper{
+    position:relative;
+    bottom:12%;
+    left:15%;
+
+}
+
+.btn-rock{
+    background-image: url("images/icon-rock.svg");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 47%;
+    width: 17%;
+    border-radius: 100%;
+    border: 20px solid #dc2e4e;
+    box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(221, 64, 93, 0.7);
+    cursor: pointer;
+        
+}
+.btn-rock:hover{
+    transform: scale(1.2);
+}
+
+.pos-rock{
+    position:relative;
+    top:63%;
+}
+
+.btn-scissors{
+    background-image: url("images/icon-scissors.svg");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 47%;
+    width: 17%;
+    border: 20px solid #ec9e0e;
+  border-radius: 100%;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(236, 169, 34, 0.7);
+  cursor: pointer;
+        
+    
+}
+.btn-scissors:hover{
+    transform: scale(1.2);
+}
+
+.pos-scissors{
+    position:relative;
+    bottom:12%;
+    right:15%;
+}
+
+.color{
+    color: hsl(229, 64%, 46%);;
+}
+
+#Result{
+    height: 350px;
+    margin: 2% 10% 0%;
+    padding-top: 2%;
+    display: none;
+    justify-content: space-between;
+        
+}
+
+.result-box{
+    position: relative;
+    left:4%;
+    top:10%;
+}
+
+.game-result{
+    font-size: 2.75rem;
+}
+
+.pos-left{
+    position: relative;
+    top:15%;
+    left:18.5%;
+}
+.pos-left2{
+    position: relative;
+    top:15%;
+    left:25%;
+}
+
+.pos-right{
+    position: relative;
+    top:15%;
+    right:18.5%;
+}
+
+.pos-right2{
+    position: relative;
+    top:15%;
+    right:25%;
+}
+
+.load{
+    height: 47%;
+    width: 17%;
+    border-radius: 100%;
+    border:0;
+  background-color: rgba(0,0,0,0.2);
+  animation: skeleton-anim 1s 0.5s infinite alternate;
+}
+
+.is-winner::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    
+    box-shadow: 0 0 0 20px rgb(255 255 255 / 9%), 0 0 0 40px rgb(255 255 255 / 6%), 0 0 0 60px rgb(255 255 255 / 3%);
+}
+
+.site-footer{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+.reset,.rules{
+    margin:10px;
+    padding:1% 5%;
+    
+}
+
+
+
+
+
+.attribution {
+    font-size: 15px; 
+    margin: 0 auto;
+    text-align: center; 
+    position: absolute;
+    bottom: 1px;
+    right: 30%;
+    left: 30%;
+
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width:850px) and (max-width:950px){
+    #Game-Main{
+        height: 350px;
+        margin: 8% 10% 0%;
+        padding-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        background-image: url("images/bg-triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #Result{
+        height: 350px;
+        margin: 2% 10% 4%;
+        padding-top: 2%;
+        display: none;
+        justify-content: space-between;
+            
+    }
+
+    
+    .result-box{
+        position: relative;
+        
+        top:63%;
+    }
+
+    
+    
+    
+    
+    
+
+}
+
+@media (min-width:675px) and (max-width:850px){
+    
+    #Game-Main{
+        height: 350px;
+        margin: 8% 10% 0%;
+        padding-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        background-image: url("images/bg-triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .btn-paper{
+        background-image: url("images/icon-paper.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border: 12px solid hsl(230, 89%, 62%);
+        border-radius: 100%;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(86, 113, 245, 0.7);
+        cursor: pointer;
+    }
+    .pos-paper{
+        position:relative;
+        bottom:9%;
+        left:13%;
+    
+    }
+    
+    
+    .btn-rock{
+        background-image: url("images/icon-rock.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border-radius: 100%;
+        border: 12px solid #dc2e4e;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(221, 64, 93, 0.7);
+        cursor: pointer;
+            
+    }
+      
+    
+    
+    .btn-scissors{
+        background-image: url("images/icon-scissors.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border: 12px solid #ec9e0e;
+      border-radius: 100%;
+      box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(236, 169, 34, 0.7);
+      cursor: pointer;
+            
+        
+    }
+    .pos-scissors{
+        position:relative;
+        bottom:9%;
+        right:13%;
+    
+    }
+
+    .load{
+        height: 30%;
+        width: 17%;
+        border-radius: 100%;
+        border:0;
+      background-color: rgba(0,0,0,0.2);
+      animation: skeleton-anim 1s 0.5s infinite alternate;
+    }
+
+    #Header{
+        display: flex;
+        border: 2px solid #606e85;
+        border-radius: 12px;
+        margin: 2% auto;
+        padding: 1% 2%;
+        width: 65%;
+        justify-content: space-between;
+    }
+
+      #Result{
+        height: 350px;
+        margin: 2% 10% 10%;
+        padding-top: 2%;
+        display: none;
+        justify-content: space-between;
+            
+    }
+
+      .result-box{
+        position: relative;
+        top:58%;
+    }
+
+    .pos-left{
+        position: relative;
+        top:15%;
+        left:16.5%;
+    }
+        
+    .pos-right{
+        position: relative;
+        top:15%;
+        right:16.5%;
+    }
+       
+    
+}
+
+@media (max-width:675px){
+    
+    #Game-Main{
+        height: 350px;
+        margin: 8% 10% 0%;
+        padding-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        background-image: url("images/bg-triangle.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #Header{
+        display: flex;
+        border: 2px solid #606e85;
+        border-radius: 12px;
+        margin: 2% auto;
+        padding: 1% 2%;
+        width: 75%;
+        justify-content: space-between;
+    }
+    
+    .result-box{
+        
+        position: realtive;
+        top:55%;
+    }
+
+    .game-result{
+        font-size: 2.65rem;
+    }
+    
+    
+
+    #Result{
+        height: 350px;
+        margin: 2% 10% 20%;
+        padding-top: 2%;
+        display: none;
+        justify-content: space-between;
+            
+    }
+
+    .btn-paper{
+        background-image: url("images/icon-paper.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border: 12px solid hsl(230, 89%, 62%);
+        border-radius: 100%;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(86, 113, 245, 0.7);
+        cursor: pointer;
+    }
+    .pos-paper{
+        position:relative;
+        bottom:9%;
+        left:7%;
+    
+    }
+    
+    
+    .btn-rock{
+        background-image: url("images/icon-rock.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border-radius: 100%;
+        border: 12px solid #dc2e4e;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(221, 64, 93, 0.7);
+        cursor: pointer;
+            
+    }
+      
+    
+    
+    .btn-scissors{
+        background-image: url("images/icon-scissors.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 30%;
+        width: 17%;
+        border: 12px solid #ec9e0e;
+      border-radius: 100%;
+      box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(236, 169, 34, 0.7);
+      cursor: pointer;
+            
+        
+    }
+    .pos-scissors{
+        position:relative;
+        bottom:9%;
+        right:7%;
+    
+    }
+
+    .load{
+        height: 30%;
+        width: 17%;
+        border-radius: 100%;
+        border:0;
+      background-color: rgba(0,0,0,0.2);
+      animation: skeleton-anim 1s 0.5s infinite alternate;
+    }
+    
+    .pos-left{
+        position: relative;
+        top:15%;
+        left:16.5%;
+    }
+        
+    .pos-right{
+        position: relative;
+        top:15%;
+        right:16.5%;
+    }
+}
+
+
+@media (max-width:550px){
+
+    #Game-Main{
+        height: 250px;
+        margin: 18% 10% 10%;
+        padding-top: 2%;
+        display: flex;
+        justify-content: space-between;
+        background-image: url("images/bg-triangle.svg");
+        background-size: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #Header{
+        display: flex;
+        border: 2px solid #606e85;
+        border-radius: 12px;
+        margin: 2% auto;
+        padding: 1% 2%;
+        width: 95%;
+        justify-content: space-between;}
+
+
+     #Result{
+            height: 250px;
+            margin: 8% 10% 35%;
+            padding-top: 2%;
+            display: none;
+            justify-content: space-between;
+                
+    }
+    
+    .btn-paper{
+        background-image: url("images/icon-paper.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 35%;
+        width: 23%;
+        border: 10px solid hsl(230, 89%, 62%);
+        border-radius: 100%;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(86, 113, 245, 0.7);
+        cursor: pointer;
+    }
+    .pos-paper{
+        position:relative;
+        bottom:9%;
+                  
+    }
+    
+    
+    .btn-rock{
+        background-image: url("images/icon-rock.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 35%;
+        width: 23%;
+        border-radius: 100%;
+        border: 10px solid #dc2e4e;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(221, 64, 93, 0.7);
+        cursor: pointer;
+            
+    }
+      
+    
+    
+    .btn-scissors{
+        background-image: url("images/icon-scissors.svg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 35%;
+        width: 23%;
+        border: 10px solid #ec9e0e;
+      border-radius: 100%;
+      box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgba(236, 169, 34, 0.7);
+      cursor: pointer;
+            
+        
+    }
+    .pos-scissors{
+        position:relative;
+        bottom:9%;
+           
+    }
+
+    .load{
+        height: 35%;
+        width: 23%;
+        border-radius: 100%;
+        border:0;
+      background-color: rgba(0,0,0,0.2);
+      animation: skeleton-anim 1s 0.5s infinite alternate;
+    }
+    
+    .pos-left{
+        position: relative;
+        top:22%;
+        left:16.5%;
+    }
+        
+    .pos-right{
+        position: relative;
+        top:22%;
+        right:16.5%;
+    }
+
+    .pos-left2{
+        position: relative;
+        top:22%;
+        left:25%;
+    }
+        
+    .pos-right2{
+        position: relative;
+        top:22%;
+        right:25;
+    }
+    .result-box{
+        width: 200px;
+    }
+    
+    .game-result{
+        font-size: 2.5rem;
+    }
+    .loading-dot{
+        width:5%;
+    }
+}
+
+
+@keyframes skeleton-anim{
+    0%{opacity: 0.3}
+    100%{opacity: 0.8}
+  }

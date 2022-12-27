@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+  <!-- bootstrap javascript -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap" rel="stylesheet">
+  
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <section id="Header">
+  
+    <img src="images\logo.svg" class="img-fluid img" alt="logo-bonus" >
+    <div class="score-Card">
+      <p class="score-label">Score</p>
+      <p class="score">0</p>
+    </div>
+  
+  </section>
+  
+  <section id="Game-Main" >
+    <button class="btn-paper pos-paper" ></button>
+    <button class="btn-rock pos-rock" ></button>
+    <button class="btn-scissors pos-scissors"></button>
+    
+  </section>
+
+  <section id="Result" >
+    <button class="user" ></button>
+      <p class="result-label result-label--player">You Picked</p>
+      <div class="result-box hidden">
+        <p class="game-result ">YOU WON</p>
+        <button class="btn btn-lg btn-light play-again" aria-label="Play Again">PLAY AGAIN</button>
+      </div>
+      <div class="loading-dot"></div>
+      <p class="result-label result-label--house">House Picked</p>
+      <button class=" comp pos-right2 load "></button>
+      
+  </section>
+
+
+  
+  <footer class="site-footer">
+    <button class="btn btn-dark  reset">R E S E T</button>
+    <button  type="button" class="btn btn-outline-light  rules" data-bs-toggle="modal" data-bs-target="#staticBackdrop">R U L E S</button>
+   
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title color" id="staticBackdropLabel">RULES</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <img class="rules-modal__content--img" src="images/image-rules.svg" alt="Game Rules">
+          </div>
+      
+        </div>
+      </div>
+    </div>
+        
+      
+    
+    <div class="attribution"> 
+      Coded by <a href="https://github.com/SAKSHAM-KAUSHIK">Saksham Kaushik😎</a>.
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
